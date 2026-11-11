@@ -9,3 +9,5 @@
 *.bak
 /build_*.log
 /shadowworld-modern.diff
+__pycache__/
+*.pyc

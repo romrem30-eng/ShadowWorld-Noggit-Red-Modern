@@ -1209,10 +1209,8 @@ namespace Noggit::Formats::ADT
           auto const key = (static_cast<std::uint64_t>(entry.uniqueID) << 32) | entry.nameID;
           if (auto const it = original_flags.find(key); it != original_flags.end())
             entry.flags = it->second;
-          // Existing Retail tiles also carry 0x40 (including 12.1 map 3075).
-          // Only apply defaults to new placements; never normalize shipped flags.
-          else if (client_data->version() == BlizzardArchive::ClientVersion::RETAIL)
-            entry.flags &= ~static_cast<std::uint16_t>(0x40);
+          // Existing Retail & Shadowlands new placements both require 0x40 (mddf_entry_is_filedata_id);
+          // only preserve pre-existing shipped flags when original_flags already contains the entry.
           else
             entry.flags |= 0x40;
         }

@@ -1,0 +1,32 @@
+{
+  "project_name": "MyCustomMap",
+  "map_id": 955,
+  "map_name": "custom_island",
+  "tile_range": {
+    "start_x": 31,
+    "end_x": 33,
+    "start_y": 31,
+    "end_y": 33
+  },
+  "preset": "island",
+  "water": {
+    "enabled": true,
+    "level": 0.0,
+    "liquid_type": 2
+  },
+  "palette": {
+    "base_grass": "tileset/expansion05/nagrand/6ng_grass01_512.blp",
+    "shore_sand": "tileset/silverpine/silverpineshore.blp",
+    "dirt_soil": "tileset/alteracmtns/alteracdirtbase02.blp",
+    "mountain_rock": "tileset/expansion07/general/8war_rock01_512.blp"
+  },
+  "height_settings": {
+    "peak_height": 160.0,
+    "radius": 380.0
+  },
+  "output_paths": {
+    "client_map_dir": "output/World/Maps/custom_island",
+    "server_maps_dir": "output/maps",
+    "mpq_archive": ""
+  }
+}
